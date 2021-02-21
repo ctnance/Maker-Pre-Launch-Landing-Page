@@ -1,3 +1,189 @@
+/* HTML Styles */
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+}
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #080C20;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+header {
+  margin: 40px 0 65.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFFFFF;
+}
+
+p {
+  color: #777F98;
+}
+
+form input {
+  border: none;
+  border-radius: 24px;
+  width: 100%;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 800;
+}
+form .email {
+  background-color: #093F68;
+  color: #777F98;
+  margin-bottom: 24px;
+}
+form .email:active, form .email:focus {
+  color: #FFFFFF;
+}
+form .submit {
+  background-color: #3EE9E5;
+  color: #093F68;
+}
+form .submit:hover, form .submit:active {
+  background-color: #080C20;
+  color: #FFFFFF;
+  border: 2px solid #3EE9E5;
+  transition: ease;
+}
+form .submit:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Flexbox Styles */
+/* Custom Class Styles */
+.main-content {
+  padding: 0 24px;
+  position: relative;
+}
+.main-content .wrapper {
+  width: 410px;
+  position: relative;
+  left: -24px;
+}
+.main-content .wrapper img {
+  width: 100%;
+}
+.main-content h1:first-child {
+  padding: 0 1.6em;
+}
+.main-content h1:first-child span {
+  color: #3EE9E5;
+}
+
+.main-content .icon-scroll {
+  margin: 32px 0 144px;
+}
+
+.pitches-container {
+  margin-bottom: 144px;
+}
+
+.pitch-container {
+  margin-bottom: 56px;
+}
+.pitch-container img {
+  width: 120px;
+  background-color: #093F68;
+  border-radius: 3em;
+  padding: 2em;
+}
+
+.pricing-plan-section {
+  margin-bottom: 58px;
+}
+
+.price-plan-cards {
+  text-align: left;
+}
+.price-plan-cards .price-plan-card {
+  position: relative;
+  border-radius: 8px;
+  margin: 0;
+  padding: 1em 2em;
+}
+.price-plan-cards .price-plan-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: inherit;
+  transform: translateY(-50%);
+}
+.price-plan-cards .price-plan-card p {
+  font-weight: 200;
+}
+.price-plan-cards .price-plan-card .card-features h3 {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+}
+.price-plan-cards .price-plan-card .card-features h3 span {
+  position: relative;
+  font-weight: 200;
+  font-size: 15px;
+  opacity: 60%;
+  bottom: 0.5em;
+}
+.price-plan-cards .price-plan-card ul {
+  padding: inherit;
+  list-style: none;
+  line-height: 2.5em;
+}
+.price-plan-cards .price-plan-card ul li::before {
+  content: url("../assets/icon-check.svg");
+  padding-right: 1em;
+  color: red;
+}
+.price-plan-cards .free-card {
+  background-color: #093F68;
+  margin-bottom: 64.5px;
+}
+.price-plan-cards .free-card .card-description {
+  margin-top: 49px;
+}
+.price-plan-cards .free-card h3, .price-plan-cards .free-card p, .price-plan-cards .free-card li {
+  color: #FFFFFF;
+}
+.price-plan-cards .free-card p {
+  opacity: 60%;
+}
+.price-plan-cards .free-card ul li::before {
+  content: url("../assets/icon-check.svg");
+  color: #3EE9E5;
+  color: red;
+}
+.price-plan-cards .paid-card {
+  background-color: #3EE9E5;
+}
+.price-plan-cards .paid-card .card-description {
+  margin-top: 60px;
+}
+.price-plan-cards .paid-card h3, .price-plan-cards .paid-card li {
+  color: #080C20;
+}
+
+.signup-container {
+  background: url("../assets/bg-footer-squiggle.svg") top center no-repeat;
+  background-size: contain;
+  margin-top: 145px;
+  margin-bottom: 200px;
+}
+.signup-container h2 {
+  padding: 0 2em;
+  margin-bottom: 2em;
+  font-size: 24px;
+}
 
 /*# sourceMappingURL=styles.css.map */

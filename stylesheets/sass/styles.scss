@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+// ***************
+// ** VARIABLES **
+// ***************
+
+// Media Query Screen Sizes
+$tablet-size: "screen and (min-width: 768px)";
+$desktop-size: "screen and (min-width: 1440px)";
+
+// Colors
+$light-blue:  #3EE9E5;
+$medium-blue: #093F68;
+$dark-blue:   #080C20;
+$gray:        #777F98;
+$white:       #FFFFFF;
+$red-error:   #FF2965;
+
+// ************
+// ** STYLES **
+// ************
+
+/* HTML Styles */
+html {
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $dark-blue;
+    font-family: "Manrope", sans-serif;
+    text-align: center;
+}
+
+header {
+    margin: 40px 0 65.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $white;
+}
+
+p {
+    color: $gray;
+}
+
+form {
+
+    input {
+        border: none;
+        border-radius: 24px;
+        width: 100%;
+        padding: 12px 18px;
+        font: inherit;
+        font-weight: 800;
+    }
+
+    .email {
+        background-color: $medium-blue;
+        color: $gray;
+        margin-bottom: 24px;
+    }
+
+    .email:active, .email:focus {
+        color: $white;
+    }
+
+    .submit {
+        background-color: $light-blue;
+        color: $medium-blue;
+    }
+
+    .submit:hover, .submit:active {
+        background-color: $dark-blue;
+        color: $white;
+        border: 2px solid $light-blue;
+        transition: ease;
+    }
+
+    .submit:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+/* Flexbox Styles */
+
+/* Custom Class Styles */
+
+// MAIN CONTENT 
+
+.main-content {
+    padding: 0 24px;
+    position: relative;
+
+    .wrapper {
+        width: 410px;
+        position: relative;
+        left: -24px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h1:first-child {
+        padding: 0 1.6em;
+
+        span {
+            color: $light-blue;
+        }
+    }
+}
+
+.main-content .icon-scroll {
+    margin: 32px 0 144px;
+}
+
+// PITCHES SECTION
+
+.pitches-container {
+    margin-bottom: 144px;
+}
+
+.pitch-container {
+    margin-bottom: 56px;
+
+    img {
+        width: 120px;
+        background-color: $medium-blue;
+        border-radius: 3em;
+        padding: 2em;
+    }
+}
+
+// CARD SECTION
+
+.pricing-plan-section {
+    margin-bottom: 58px;
+}
+
+.price-plan-cards {
+    text-align: left;
+
+    .price-plan-card {
+        position: relative;
+        border-radius: 8px;
+        margin: 0;
+        padding: 1em 2em;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-left: inherit;
+            transform: translateY(-50%);
+        }
+
+        p {
+            font-weight: 200;
+        }
+
+        .card-features {
+            h3 {
+                font-size: 40px;
+                font-weight: 800;
+                margin: 0;
+    
+                span {
+                    position: relative;
+                    font-weight: 200;
+                    font-size: 15px;
+                    opacity: 60%;
+                    bottom: 0.5em;
+                }
+            }
+        }
+
+        ul {
+            padding: inherit;
+            list-style: none;
+            line-height: 2.5em;
+            // list-style-image: url("../assets/icon-check.svg");
+        }
+
+        ul li::before {
+            content: url("../assets/icon-check.svg");
+            padding-right: 1em;
+            color: red;
+        }
+    }
+
+    .free-card {
+        background-color: $medium-blue;
+        margin-bottom: 64.5px;
+
+        .card-description {
+            margin-top: 49px;
+        }
+
+        h3, p, li {
+            color: $white;
+        }
+
+        p {
+            opacity: 60%;
+        }
+
+        ul li::before {
+            content: url("../assets/icon-check.svg");
+            color: $light-blue;
+            color: red;
+        }
+    }
+
+    .paid-card {
+        background-color: $light-blue;
+
+        .card-description {
+            margin-top: 60px;
+        }
+
+        h3, li {
+            color: $dark-blue;
+        }
+    }
+}
+
+.signup-container {
+    background: url("../assets/bg-footer-squiggle.svg") top center no-repeat;
+    background-size: contain;
+    margin-top: 145px;
+    margin-bottom: 200px;
+
+    h2 {
+        padding: 0 2em;
+        margin-bottom: 2em;
+        font-size: 24px;
+    }
+}
+
+// .main-content img {
+//     position: relative;
+//     right: 0;
+//     left: 0;
+// }
