@@ -9,12 +9,21 @@ $tablet-size: "screen and (min-width: 768px)";
 $desktop-size: "screen and (min-width: 1440px)";
 
 // Colors
-$light-blue:  #3EE9E5;
-$medium-blue: #093F68;
-$dark-blue:   #080C20;
-$gray:        #777F98;
-$white:       #FFFFFF;
-$red-error:   #FF2965;
+$light-blue: #3ee9e5;
+$medium-blue: #093f68;
+$dark-blue: #080c20;
+$gray: #777f98;
+$white: #ffffff;
+$red-error: #ff2965;
+
+@mixin form-element {
+    border: none;
+    border-radius: 24px;
+    width: 100%;
+    padding: 12px 18px;
+    font: inherit;
+    font-weight: 800;
+}
 
 // ************
 // ** STYLES **
@@ -26,7 +35,8 @@ html {
     font-size: 15px;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -45,7 +55,12 @@ header {
     margin: 40px 0 65.5px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: $white;
 }
 
@@ -54,39 +69,36 @@ p {
 }
 
 form {
-
     input {
-        border: none;
-        border-radius: 24px;
-        width: 100%;
-        padding: 12px 18px;
-        font: inherit;
-        font-weight: 800;
+        @include form-element();
     }
 
-    .email {
+    input[type="email"] {
         background-color: $medium-blue;
         color: $gray;
         margin-bottom: 24px;
     }
 
-    .email:active, .email:focus {
+    input[type="email"]:active,
+    input[type="email"]:focus {
         color: $white;
     }
 
-    .submit {
+    button {
+        @include form-element();
         background-color: $light-blue;
         color: $medium-blue;
     }
 
-    .submit:hover, .submit:active {
+    button:hover,
+    button:active {
         background-color: $dark-blue;
         color: $white;
         border: 2px solid $light-blue;
         transition: ease;
     }
 
-    .submit:active {
+    button:active {
         position: relative;
         top: 1px;
     }
@@ -96,16 +108,18 @@ form {
 
 /* Custom Class Styles */
 
-// MAIN CONTENT 
+// MAIN CONTENT
 
 .main-content {
     padding: 0 24px;
     position: relative;
+    overflow: hidden;
 
     .wrapper {
         width: 410px;
         position: relative;
         left: -24px;
+        margin: auto;
 
         img {
             width: 100%;
@@ -119,10 +133,16 @@ form {
             color: $light-blue;
         }
     }
+
+    .icon-scroll {
+        margin: 32px 0 144px;
+    }
 }
 
-.main-content .icon-scroll {
-    margin: 32px 0 144px;
+@media screen and (min-width: 458px) {
+    .main-content .wrapper {
+        left: 0;
+    }
 }
 
 // PITCHES SECTION
@@ -134,11 +154,28 @@ form {
 .pitch-container {
     margin-bottom: 56px;
 
-    img {
+    .img-wrapper {
         width: 120px;
+        height: 124px;
         background-color: $medium-blue;
         border-radius: 3em;
         padding: 2em;
+        margin: auto;
+
+        img {
+            width: 100%;
+        }
+
+        .passions-img {
+            position: relative;
+            top: -2px;
+            left: 6px;
+        }
+
+        .work-anywhere-img {
+            position: relative;
+            top: 12px;
+        }
     }
 }
 
@@ -174,7 +211,7 @@ form {
                 font-size: 40px;
                 font-weight: 800;
                 margin: 0;
-    
+
                 span {
                     position: relative;
                     font-weight: 200;
@@ -191,12 +228,6 @@ form {
             line-height: 2.5em;
             // list-style-image: url("../assets/icon-check.svg");
         }
-
-        ul li::before {
-            content: url("../assets/icon-check.svg");
-            padding-right: 1em;
-            color: red;
-        }
     }
 
     .free-card {
@@ -207,7 +238,9 @@ form {
             margin-top: 49px;
         }
 
-        h3, p, li {
+        h3,
+        p,
+        li {
             color: $white;
         }
 
@@ -216,9 +249,8 @@ form {
         }
 
         ul li::before {
-            content: url("../assets/icon-check.svg");
-            color: $light-blue;
-            color: red;
+            content: url("../assets/icon-check - Copy.svg");
+            padding-right: 1em;
         }
     }
 
@@ -229,8 +261,14 @@ form {
             margin-top: 60px;
         }
 
-        h3, li {
+        h3,
+        li {
             color: $dark-blue;
+        }
+
+        ul li::before {
+            content: url("../assets/icon-check.svg");
+            padding-right: 1em;
         }
     }
 }
@@ -247,9 +285,3 @@ form {
         font-size: 24px;
     }
 }
-
-// .main-content img {
-//     position: relative;
-//     right: 0;
-//     left: 0;
-// }

@@ -4,7 +4,8 @@ html {
   font-size: 15px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -14,7 +15,7 @@ html, body {
 }
 
 body {
-  background-color: #080C20;
+  background-color: #080c20;
   font-family: "Manrope", sans-serif;
   text-align: center;
 }
@@ -23,12 +24,17 @@ header {
   margin: 40px 0 65.5px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #FFFFFF;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
 }
 
 p {
-  color: #777F98;
+  color: #777f98;
 }
 
 form input {
@@ -39,25 +45,33 @@ form input {
   font: inherit;
   font-weight: 800;
 }
-form .email {
-  background-color: #093F68;
-  color: #777F98;
+form input[type="email"] {
+  background-color: #093f68;
+  color: #777f98;
   margin-bottom: 24px;
 }
-form .email:active, form .email:focus {
-  color: #FFFFFF;
+form input[type="email"]:active,
+form input[type="email"]:focus {
+  color: #ffffff;
 }
-form .submit {
-  background-color: #3EE9E5;
-  color: #093F68;
+form button {
+  border: none;
+  border-radius: 24px;
+  width: 100%;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 800;
+  background-color: #3ee9e5;
+  color: #093f68;
 }
-form .submit:hover, form .submit:active {
-  background-color: #080C20;
-  color: #FFFFFF;
-  border: 2px solid #3EE9E5;
+form button:hover,
+form button:active {
+  background-color: #080c20;
+  color: #ffffff;
+  border: 2px solid #3ee9e5;
   transition: ease;
 }
-form .submit:active {
+form button:active {
   position: relative;
   top: 1px;
 }
@@ -67,11 +81,13 @@ form .submit:active {
 .main-content {
   padding: 0 24px;
   position: relative;
+  overflow: hidden;
 }
 .main-content .wrapper {
   width: 410px;
   position: relative;
   left: -24px;
+  margin: auto;
 }
 .main-content .wrapper img {
   width: 100%;
@@ -80,13 +96,17 @@ form .submit:active {
   padding: 0 1.6em;
 }
 .main-content h1:first-child span {
-  color: #3EE9E5;
+  color: #3ee9e5;
 }
-
 .main-content .icon-scroll {
   margin: 32px 0 144px;
 }
 
+@media screen and (min-width: 458px) {
+  .main-content .wrapper {
+    left: 0;
+  }
+}
 .pitches-container {
   margin-bottom: 144px;
 }
@@ -94,11 +114,25 @@ form .submit:active {
 .pitch-container {
   margin-bottom: 56px;
 }
-.pitch-container img {
+.pitch-container .img-wrapper {
   width: 120px;
-  background-color: #093F68;
+  height: 124px;
+  background-color: #093f68;
   border-radius: 3em;
   padding: 2em;
+  margin: auto;
+}
+.pitch-container .img-wrapper img {
+  width: 100%;
+}
+.pitch-container .img-wrapper .passions-img {
+  position: relative;
+  top: -2px;
+  left: 6px;
+}
+.pitch-container .img-wrapper .work-anywhere-img {
+  position: relative;
+  top: 12px;
 }
 
 .pricing-plan-section {
@@ -141,37 +175,38 @@ form .submit:active {
   list-style: none;
   line-height: 2.5em;
 }
-.price-plan-cards .price-plan-card ul li::before {
-  content: url("../assets/icon-check.svg");
-  padding-right: 1em;
-  color: red;
-}
 .price-plan-cards .free-card {
-  background-color: #093F68;
+  background-color: #093f68;
   margin-bottom: 64.5px;
 }
 .price-plan-cards .free-card .card-description {
   margin-top: 49px;
 }
-.price-plan-cards .free-card h3, .price-plan-cards .free-card p, .price-plan-cards .free-card li {
-  color: #FFFFFF;
+.price-plan-cards .free-card h3,
+.price-plan-cards .free-card p,
+.price-plan-cards .free-card li {
+  color: #ffffff;
 }
 .price-plan-cards .free-card p {
   opacity: 60%;
 }
 .price-plan-cards .free-card ul li::before {
-  content: url("../assets/icon-check.svg");
-  color: #3EE9E5;
-  color: red;
+  content: url("../assets/icon-check - Copy.svg");
+  padding-right: 1em;
 }
 .price-plan-cards .paid-card {
-  background-color: #3EE9E5;
+  background-color: #3ee9e5;
 }
 .price-plan-cards .paid-card .card-description {
   margin-top: 60px;
 }
-.price-plan-cards .paid-card h3, .price-plan-cards .paid-card li {
-  color: #080C20;
+.price-plan-cards .paid-card h3,
+.price-plan-cards .paid-card li {
+  color: #080c20;
+}
+.price-plan-cards .paid-card ul li::before {
+  content: url("../assets/icon-check.svg");
+  padding-right: 1em;
 }
 
 .signup-container {
