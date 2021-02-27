@@ -4,8 +4,8 @@
 #####################################################
 *.sketch
 *.fig
-.sass-cache
-.sass-cache/*
+/.sass-cache
+/sass-cache
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################

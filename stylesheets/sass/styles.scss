@@ -53,6 +53,11 @@ body {
 
 header {
     margin: 40px 0 65.5px;
+
+    @media #{$tablet-size} {
+        margin: 48px 39px 77px;
+        text-align: left;
+    }
 }
 
 h1,
@@ -104,8 +109,6 @@ form {
     }
 }
 
-/* Flexbox Styles */
-
 /* Custom Class Styles */
 
 // MAIN CONTENT
@@ -126,7 +129,17 @@ form {
         }
     }
 
-    h1:first-child {
+    @media #{$desktop-size} {
+        h1 {
+            font-size: 3.2em;
+        }
+    }
+}
+
+.intro-content {
+
+    h1 {
+        margin-top: 51px;
         padding: 0 1.6em;
 
         span {
@@ -135,10 +148,36 @@ form {
     }
 
     .icon-scroll {
-        margin: 32px 0 144px;
+        margin-top: 32px;
+    }
+    
+    @media #{$tablet-size} {
+        // background: url(../assets/bg-hero-squiggle.svg) no-repeat;
+        width: 457px;
+        margin: 0 auto 109px;
+    }
+
+    @media #{$desktop-size} {
+        width: 730px;
+        margin-bottom: 272px;
+
+        h1 {
+            padding: 0 2em;
+            line-height: 1.25;
+        }
+
+        p {
+            padding: 0 6em;
+            line-height: 1.75;
+        }
+
+        .icon-scroll {
+            margin-top: 64px;
+        }
     }
 }
 
+// FIX THIS SOLUTION - TOO MUCH OF A HACK
 @media screen and (min-width: 458px) {
     .main-content .wrapper {
         left: 0;
@@ -149,32 +188,109 @@ form {
 
 .pitches-container {
     margin-bottom: 144px;
-}
 
-.pitch-container {
-    margin-bottom: 56px;
+    @media #{$tablet-size} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 573px;
+        margin: 0 auto 79px;
 
-    .img-wrapper {
-        width: 120px;
-        height: 124px;
-        background-color: $medium-blue;
-        border-radius: 3em;
-        padding: 2em;
-        margin: auto;
-
-        img {
-            width: 100%;
+        .pitch-container-one, .pitch-container-three {
+            margin-left: auto;
         }
+    }
 
-        .passions-img {
-            position: relative;
-            top: -2px;
-            left: 6px;
+    @media #{$desktop-size} {
+        flex-direction: row;
+        gap: 10px;
+        width: 1110px;
+        height: 383px;
+        margin-bottom: 202px;
+
+        .pitch-container-two, .pitch-container-four {
+            align-self: flex-end;
         }
+    }
 
-        .work-anywhere-img {
-            position: relative;
-            top: 12px;
+    .pitch-container {
+        margin-bottom: 56px;
+    
+        .img-wrapper {
+            width: 120px;
+            height: 124px;
+            background-color: $medium-blue;
+            border-radius: 3em;
+            padding: 2em;
+            margin: auto;
+    
+            img {
+                width: 100%;
+            }
+    
+            .passions-img {
+                position: relative;
+                top: -2px;
+                left: 6px;
+            }
+    
+            .work-anywhere-img {
+                position: relative;
+                top: 12px;
+            }
+
+            @media #{$desktop-size} {
+                width: 160px;
+                height: 164px;
+
+                .passions-img {
+                    width: 88px;
+                    height: 106px;
+                    left: 12px;
+                }
+
+                .freedom-img {
+                    position: relative;
+                    width: 74px;
+                    height: 89px;
+                    top: 12px;
+                    left: 14px;
+                }
+
+                .lifestyle-img {
+                    position: relative;
+                    width: 80px;
+                    height: 94px;
+                    top: 6px;
+                    left: 8px;
+                }
+            }
+        }
+    
+        @media #{$tablet-size} {
+            
+            width: 90%;
+            text-align: left;
+            margin-bottom: 40px;
+    
+            .img-wrapper {
+                float: left;
+                margin-right: 55px;
+            }
+        }
+    
+        @media #{$desktop-size} {
+
+            margin-bottom: 0;
+
+            h3 {
+                clear: left;
+                padding-top: 48px;
+            }
+    
+            p {
+                padding-right: 1em;
+            }
         }
     }
 }
@@ -183,16 +299,46 @@ form {
 
 .pricing-plan-section {
     margin-bottom: 58px;
+
+    @media #{$tablet-size} {
+        width: 75%;
+        margin: 0 auto 79px;
+
+        h2 {
+            margin-bottom: 27px;
+        }
+    }
+
+    @media #{$desktop-size} {
+        width: 540px;
+        margin-bottom: 105px;
+    }
 }
 
 .price-plan-cards {
     text-align: left;
 
+    @media #{$desktop-size} {
+        display: flex;
+        justify-content: center;
+    }
+
     .price-plan-card {
         position: relative;
         border-radius: 8px;
-        margin: 0;
+        margin: 0 auto;
         padding: 1em 2em;
+
+        @media #{$tablet-size} {
+            width: 60%;
+            padding: 48px 38px;
+        }
+
+        @media #{$desktop-size} {
+            margin-left: 0;
+            margin-right: 2em;
+            width: 445px;
+        }
 
         img {
             position: absolute;
@@ -226,7 +372,6 @@ form {
             padding: inherit;
             list-style: none;
             line-height: 2.5em;
-            // list-style-image: url("../assets/icon-check.svg");
         }
     }
 
@@ -234,8 +379,8 @@ form {
         background-color: $medium-blue;
         margin-bottom: 64.5px;
 
-        .card-description {
-            margin-top: 49px;
+        @media #{$desktop-size} {
+            margin-bottom: 0;
         }
 
         h3,
@@ -257,10 +402,6 @@ form {
     .paid-card {
         background-color: $light-blue;
 
-        .card-description {
-            margin-top: 60px;
-        }
-
         h3,
         li {
             color: $dark-blue;
@@ -279,9 +420,28 @@ form {
     margin-top: 145px;
     margin-bottom: 200px;
 
+    @media #{$tablet-size} {
+        .email {
+            width: 320px;
+            margin-right: 16px;
+        }
+
+        .submit {
+            width: 140px;
+        }
+    }
+
+    @media #{$desktop-size} {
+        margin-top: 203px;
+    }
+
     h2 {
         padding: 0 2em;
         margin-bottom: 2em;
         font-size: 24px;
+
+        @media #{$tablet-size} {
+            margin-bottom: 29px;
+        }
     }
 }
