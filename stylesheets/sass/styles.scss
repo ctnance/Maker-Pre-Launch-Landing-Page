@@ -58,6 +58,10 @@ header {
         margin: 48px 39px 77px;
         text-align: left;
     }
+
+    @media #{$desktop-size} {
+        margin: 81px 0 114px 165px;
+    }
 }
 
 h1,
@@ -71,6 +75,10 @@ h6 {
 
 p {
     color: $gray;
+
+    @media #{$desktop-size} {
+        line-height: 1.5em;
+    }
 }
 
 form {
@@ -108,7 +116,6 @@ form {
         top: 1px;
     }
 }
-
 /* Custom Class Styles */
 
 // MAIN CONTENT
@@ -117,6 +124,10 @@ form {
     padding: 0 24px;
     position: relative;
     overflow: hidden;
+
+    ::after {
+        background: url(../assets/illustration-hero-left.svg) center left no-repeat;
+    }
 
     .wrapper {
         width: 410px;
@@ -129,50 +140,75 @@ form {
         }
     }
 
-    @media #{$desktop-size} {
-        h1 {
-            font-size: 3.2em;
+    @media #{$tablet-size} {
+        padding: 0 0;
+
+        .wrapper {
+            display: none;
         }
     }
 }
 
-.intro-content {
+.intro-container {
 
-    h1 {
-        margin-top: 51px;
-        padding: 0 1.6em;
-
-        span {
-            color: $light-blue;
-        }
-    }
-
-    .icon-scroll {
-        margin-top: 32px;
-    }
-    
     @media #{$tablet-size} {
-        // background: url(../assets/bg-hero-squiggle.svg) no-repeat;
-        width: 457px;
-        margin: 0 auto 109px;
+        background: url(../assets/illustration-hero-left.svg) center left -169px no-repeat,
+                    url(../assets/illustration-hero-right.svg) center right -171px no-repeat;
+        background-size: contain;
+        height: 357px;
+        // width: 730px;
     }
 
     @media #{$desktop-size} {
-        width: 730px;
+        background: url(../assets/illustration-hero-left.svg) center left -53px no-repeat,
+                    url(../assets/illustration-hero-right.svg) center right -60px no-repeat;
+        // width: 730px;
+        height: 459px;
         margin-bottom: 272px;
+    }
+
+    .intro-content {
+        margin-bottom: 144px;
 
         h1 {
-            padding: 0 2em;
-            line-height: 1.25;
-        }
+            padding: 0 1.6em;
 
-        p {
-            padding: 0 6em;
-            line-height: 1.75;
+            span {
+                color: $light-blue;
+            }
         }
 
         .icon-scroll {
-            margin-top: 64px;
+            margin-top: 32px;
+        }
+
+        @media #{$tablet-size} {
+            background: url(../assets/bg-hero-squiggle.svg) top center no-repeat;
+            background-size: contain;
+            width: 457px;
+            margin: 0 auto 109px;
+
+            h1 {
+                line-height: 1.25;
+            }
+        }
+
+        @media #{$desktop-size} {
+            width: 730px;
+
+            h1 {
+                padding: 88.19px 2em 0;
+                line-height: 1.25;
+            }
+
+            p {
+                padding: 0 6em;
+                line-height: 1.75;
+            }
+
+            .icon-scroll {
+                margin-top: 64px;
+            }
         }
     }
 }
@@ -196,7 +232,8 @@ form {
         width: 573px;
         margin: 0 auto 79px;
 
-        .pitch-container-one, .pitch-container-three {
+        .pitch-container-one,
+        .pitch-container-three {
             margin-left: auto;
         }
     }
@@ -208,14 +245,15 @@ form {
         height: 383px;
         margin-bottom: 202px;
 
-        .pitch-container-two, .pitch-container-four {
+        .pitch-container-two,
+        .pitch-container-four {
             align-self: flex-end;
         }
     }
 
     .pitch-container {
         margin-bottom: 56px;
-    
+
         .img-wrapper {
             width: 120px;
             height: 124px;
@@ -223,17 +261,17 @@ form {
             border-radius: 3em;
             padding: 2em;
             margin: auto;
-    
+
             img {
                 width: 100%;
             }
-    
+
             .passions-img {
                 position: relative;
                 top: -2px;
                 left: 6px;
             }
-    
+
             .work-anywhere-img {
                 position: relative;
                 top: 12px;
@@ -242,6 +280,10 @@ form {
             @media #{$desktop-size} {
                 width: 160px;
                 height: 164px;
+
+                h3 {
+                    font-size: 18px;
+                }
 
                 .passions-img {
                     width: 88px;
@@ -266,28 +308,26 @@ form {
                 }
             }
         }
-    
+
         @media #{$tablet-size} {
-            
             width: 90%;
             text-align: left;
             margin-bottom: 40px;
-    
+
             .img-wrapper {
                 float: left;
                 margin-right: 55px;
             }
         }
-    
-        @media #{$desktop-size} {
 
+        @media #{$desktop-size} {
             margin-bottom: 0;
 
             h3 {
                 clear: left;
                 padding-top: 48px;
             }
-    
+
             p {
                 padding-right: 1em;
             }
@@ -321,6 +361,7 @@ form {
     @media #{$desktop-size} {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .price-plan-card {
@@ -381,6 +422,7 @@ form {
 
         @media #{$desktop-size} {
             margin-bottom: 0;
+            padding: 48px 38px;
         }
 
         h3,
@@ -402,6 +444,10 @@ form {
     .paid-card {
         background-color: $light-blue;
 
+        @media #{$desktop-size} {
+            padding: 60px 38px;
+        }
+
         h3,
         li {
             color: $dark-blue;
@@ -418,7 +464,11 @@ form {
     background: url("../assets/bg-footer-squiggle.svg") top center no-repeat;
     background-size: contain;
     margin-top: 145px;
-    margin-bottom: 200px;
+    margin-bottom: 117px;
+
+    form {
+        padding: 0 2em;
+    }
 
     @media #{$tablet-size} {
         .email {
@@ -433,15 +483,38 @@ form {
 
     @media #{$desktop-size} {
         margin-top: 203px;
+        height: 228px;
     }
 
     h2 {
-        padding: 0 2em;
-        margin-bottom: 2em;
-        font-size: 24px;
+        padding: 0 2.25em;
+        padding-bottom: 2em;
 
         @media #{$tablet-size} {
             margin-bottom: 29px;
         }
+
+        @media #{$desktop-size} {
+            padding: 52px 0 42px;
+            margin: 0;
+        }
     }
+}
+
+h1 {
+    @media #{$desktop-size} {
+        font-size: 3.2em;
+    }
+}
+
+h2 {
+    font-size: 24px;
+
+    @media #{$desktop-size} {
+        font-size: 32px;
+    }
+}
+
+h3 {
+    font-size: 1.2em;
 }
