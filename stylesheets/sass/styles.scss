@@ -154,7 +154,8 @@ form {
                     url(../assets/illustration-hero-right.svg) center right -171px no-repeat;
         background-size: contain;
         height: 357px;
-        // width: 730px;
+        margin-bottom: 109.5px;
+        
 
         .wrapper {
             display: none;
@@ -166,7 +167,7 @@ form {
                     url(../assets/illustration-hero-right.svg) center right -60px no-repeat;
         // width: 730px;
         height: 459px;
-        margin-bottom: 272px;
+        margin-bottom: 202px;
     }
 
     .intro-content {
@@ -194,37 +195,44 @@ form {
 
         p {
             font-weight: 200;
-            margin: 23px 0 32px;
+            margin: 24px 0 32px;
         }
 
+        // FIX POSITIONING OF THIS ELEMENT ON TABLET
         @media #{$tablet-size} {
             background: url(../assets/bg-hero-squiggle.svg) top center no-repeat;
-            background-size: contain;
+            background-size: 368px 268px;
             width: 457px;
+            height: 268px;
             margin: auto;
+            padding-top: 14px;
             position: relative;
-            top: 51px;
+            // top: 35px;
 
             h1 {
-                line-height: 1.25;
-            }
-        }
-
-        @media #{$desktop-size} {
-            width: 730px;
-
-            h1 {
-                padding: 88.19px 2em 0;
                 line-height: 1.25;
             }
 
             p {
-                padding: 0 6em;
                 line-height: 1.75;
             }
+        }
 
-            .icon-scroll {
-                margin-top: 64px;
+        @media #{$desktop-size} {
+            background-size: 544.31px 377.98px;
+            width: 730px;
+            height: 377.98px;
+            padding-top: 88.19px;
+
+            h1 {
+                padding: 0 1em;
+                line-height: 1.25;
+            }
+
+            p {
+                margin-bottom: 64px;
+                padding: 0 6.5em;
+                line-height: 1.75;
             }
         }
     }
@@ -247,7 +255,7 @@ form {
         flex-direction: column;
         justify-content: center;
         width: 573px;
-        margin: 0 auto 79px;
+        margin: 0 auto 142px;
 
         .pitch-container-one,
         .pitch-container-three {
@@ -343,6 +351,15 @@ form {
                 float: left;
                 margin-right: 55px;
             }
+
+            h3 {
+                margin: 11px 0;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1.75em;
+            }
         }
 
         @media #{$desktop-size} {
@@ -372,11 +389,27 @@ form {
     @media #{$tablet-size} {
         width: 75%;
         margin: 0 auto 79px;
+
+        h2 {
+            margin-bottom: 27px;
+        }
+
+        p {
+            line-height: 1.75;
+        }
     }
 
     @media #{$desktop-size} {
         width: 540px;
         margin-bottom: 105px;
+
+        h2 {
+            margin-bottom: 24px;
+        }
+    
+        p {
+            font-weight: 200;
+        }
     }
 }
 
@@ -396,7 +429,7 @@ form {
         padding: 1em 2em;
 
         @media #{$tablet-size} {
-            width: 60%;
+            width: 445px;
             padding: 48px 38px;
         }
 
@@ -435,9 +468,10 @@ form {
         }
 
         ul {
+            margin-top: 19px;
             padding: inherit;
             list-style: none;
-            line-height: 2.5em;
+            line-height: 2.25;
         }
     }
 
@@ -490,7 +524,8 @@ form {
 
 .signup-container {
     background: url("../assets/bg-footer-squiggle.svg") top center no-repeat;
-    background-size: contain;
+    background-size: 584px;
+    margin-top: 144px;
     padding-bottom: 164px;
 
     form {
@@ -498,9 +533,14 @@ form {
     }
 
     @media #{$tablet-size} {
+        background-size: 1022px;
+        background-position: top left -240px;
+        margin-top: 119px;
+        padding-top: 16px;
+
         .email {
             width: 320px;
-            margin-right: 16px;
+            margin-right: 13px;
         }
 
         .submit {
@@ -509,13 +549,13 @@ form {
     }
 
     @media #{$desktop-size} {
-        margin-top: 203px;
+        margin-top: 151px;
         height: 228px;
     }
 
     h2 {
-        margin: 144px 0 31px;
-        padding: 0 2.25em;
+        margin: 0 0 31px;
+        padding: 0 3em;
 
         @media #{$tablet-size} {
             margin-bottom: 29px;
