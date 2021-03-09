@@ -106,6 +106,10 @@ p {
 
 form {
 
+    label {
+        display: none;
+    }
+
     input {
         @include form-element();
     }

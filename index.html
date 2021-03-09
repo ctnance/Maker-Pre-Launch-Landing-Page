@@ -125,7 +125,7 @@
     <h2>Get notified when we launch</h2>
 
     <form action="/" method="POST">
-      <input type="email" id="email" class="email" name="email" placeholder="Email address">
+      <label for="email">Email</label><input type="email" id="email" class="email" name="email" placeholder="Email address">
       <div id="email-error">Oops! That doesn't look like an email address.</div>
       <button type="submit" class="submit" name="submit" onclick="validateEmail(document.getElementById('email').value)">Get notified</button>
     </form>
