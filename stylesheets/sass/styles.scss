@@ -73,11 +73,33 @@ h6 {
     color: $white;
 }
 
+h1 {
+    @media #{$desktop-size} {
+        font-size: 3.2em;
+    }
+}
+
+h2 {
+    font-size: 24px;
+
+    @media #{$desktop-size} {
+        font-size: 32px;
+    }
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
 p {
     color: $gray;
 
+    @media #{$tablet-size} {
+        line-height: 1.75;
+    }
+
     @media #{$desktop-size} {
-        line-height: 1.5em;
+        line-height: 1.5;
     }
 }
 
@@ -90,17 +112,10 @@ form {
     input[type="email"] {
         background-color: $medium-blue;
         color: $gray;
-        margin-bottom: 24px;
 
         @media #{$tablet-size} {
             width: 320px;
             margin-right: 16px;
-        }
-    }
-
-    input[type="submit"] {
-        @media #{$tablet-size} {
-            width: 140px;
         }
     }
 
@@ -111,8 +126,13 @@ form {
 
     button {
         @include form-element();
+        margin-top: 24px;
         background-color: $light-blue;
         color: $medium-blue;
+
+        @media #{$tablet-size} {
+            width: 140px;
+        }
     }
 
     button:hover,
@@ -198,7 +218,6 @@ form {
             margin: 24px 0 32px;
         }
 
-        // FIX POSITIONING OF THIS ELEMENT ON TABLET
         @media #{$tablet-size} {
             background: url(../assets/bg-hero-squiggle.svg) top center no-repeat;
             background-size: 368px 268px;
@@ -211,10 +230,6 @@ form {
 
             h1 {
                 line-height: 1.25;
-            }
-
-            p {
-                line-height: 1.75;
             }
         }
 
@@ -232,7 +247,6 @@ form {
             p {
                 margin-bottom: 64px;
                 padding: 0 6.5em;
-                line-height: 1.75;
             }
         }
     }
@@ -279,6 +293,15 @@ form {
     .pitch-container {
         margin-bottom: 56px;
 
+        h3 {
+            margin: 32px 0 11px;
+        }
+
+        p {
+            font-weight: 200;
+            margin: 0;
+        }
+
         .img-wrapper {
             width: 120px;
             height: 124px;
@@ -301,22 +324,33 @@ form {
                 position: relative;
                 top: 12px;
             }
+        }
+
+        @media #{$tablet-size} {
+            width: 90%;
+            text-align: left;
+            margin-bottom: 40px;
+
+            .img-wrapper {
+                float: left;
+                margin-right: 55px;
+            }
 
             h3 {
-                margin: 32px 0 11px;
+                margin: 11px 0;
             }
 
             p {
                 margin: 0;
             }
+        }
 
-            @media #{$desktop-size} {
+        @media #{$desktop-size} {
+            margin-bottom: 0;
+
+            .img-wrapper {
                 width: 160px;
                 height: 164px;
-
-                h3 {
-                    font-size: 18px;
-                }
 
                 .passions-img {
                     width: 88px;
@@ -340,30 +374,6 @@ form {
                     left: 8px;
                 }
             }
-        }
-
-        @media #{$tablet-size} {
-            width: 90%;
-            text-align: left;
-            margin-bottom: 40px;
-
-            .img-wrapper {
-                float: left;
-                margin-right: 55px;
-            }
-
-            h3 {
-                margin: 11px 0;
-            }
-
-            p {
-                margin: 0;
-                line-height: 1.75em;
-            }
-        }
-
-        @media #{$desktop-size} {
-            margin-bottom: 0;
 
             h3 {
                 clear: left;
@@ -392,10 +402,6 @@ form {
 
         h2 {
             margin-bottom: 27px;
-        }
-
-        p {
-            line-height: 1.75;
         }
     }
 
@@ -522,7 +528,6 @@ form {
     }
 }
 
-// FIX BACKGROUND IMAGE POSITIONING HERE FOR ALL SIZES
 .signup-container {
     background: url("../assets/bg-footer-squiggle.svg") top left -105px repeat-x;
     background-size: 584px 80px;
@@ -531,6 +536,12 @@ form {
 
     form {
         padding: 0 2em;
+        position: relative;
+    }
+
+    h2 {
+        margin: 0 0 31px;
+        padding: 0 3em;
     }
 
     @media #{$tablet-size} {
@@ -539,13 +550,13 @@ form {
         margin-top: 119px;
         padding-top: 16px;
 
-        .email {
-            width: 320px;
-            margin-right: 13px;
+        form {
+            display: inline-block;
+            padding: 0;
         }
 
-        .submit {
-            width: 140px;
+        h2 {
+            margin-bottom: 29px;
         }
     }
 
@@ -555,37 +566,21 @@ form {
         margin: 151px 0 117px;
         padding-bottom: 0;
         height: 228px;
-    }
 
-    h2 {
-        margin: 0 0 31px;
-        padding: 0 3em;
-
-        @media #{$tablet-size} {
-            margin-bottom: 29px;
-        }
-
-        @media #{$desktop-size} {
+        h2 {
             padding: 52px 0 42px;
             margin: 0;
         }
     }
 }
 
-h1 {
-    @media #{$desktop-size} {
-        font-size: 3.2em;
-    }
-}
-
-h2 {
-    font-size: 24px;
-
-    @media #{$desktop-size} {
-        font-size: 32px;
-    }
-}
-
-h3 {
-    font-size: 1.2em;
+#email-error {
+    display: none;
+    color: $red-error;
+    font-weight: 200;
+    font-size: 12px;
+    position:absolute;
+    text-align: left;
+    margin: 4px auto 0;
+    padding-left: 18px;
 }
