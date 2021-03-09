@@ -37,7 +37,7 @@ html {
 
 html,
 body {
-    height: 100%;
+    // height: 100%;
     margin: 0;
 }
 
@@ -53,7 +53,8 @@ body {
 
 header {
     margin: 40px 0 65.5px;
-
+    height: 35px;
+    
     @media #{$tablet-size} {
         margin: 48px 39px 77px;
         text-align: left;
@@ -240,11 +241,13 @@ form {
             padding-top: 88.19px;
 
             h1 {
-                padding: 0 1em;
+                margin-top: 0;
+                padding: 0 2em;
                 line-height: 1.25;
             }
 
             p {
+                font-weight: 400;
                 margin-bottom: 64px;
                 padding: 0 6.5em;
             }
@@ -298,7 +301,6 @@ form {
         }
 
         p {
-            font-weight: 200;
             margin: 0;
         }
 
@@ -381,6 +383,7 @@ form {
             }
 
             p {
+                font-weight: 400;
                 padding-right: 1em;
             }
         }
@@ -403,6 +406,10 @@ form {
         h2 {
             margin-bottom: 27px;
         }
+
+        p {
+            line-height: 1.6672;
+        }
     }
 
     @media #{$desktop-size} {
@@ -414,7 +421,7 @@ form {
         }
     
         p {
-            font-weight: 200;
+            font-weight: 400;
         }
     }
 }
@@ -465,7 +472,7 @@ form {
 
                 span {
                     position: relative;
-                    font-weight: 200;
+                    font-weight: 400;
                     font-size: 15px;
                     opacity: 60%;
                     bottom: 0.5em;
@@ -498,6 +505,7 @@ form {
         }
 
         p {
+            font-weight: 400;
             opacity: 60%;
         }
 

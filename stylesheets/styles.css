@@ -6,7 +6,6 @@ html {
 
 html,
 body {
-  height: 100%;
   margin: 0;
 }
 
@@ -22,6 +21,7 @@ body {
 
 header {
   margin: 40px 0 65.5px;
+  height: 35px;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -206,10 +206,12 @@ form button:active {
     padding-top: 88.19px;
   }
   .intro-container .intro-content h1 {
-    padding: 0 1em;
+    margin-top: 0;
+    padding: 0 2em;
     line-height: 1.25;
   }
   .intro-container .intro-content p {
+    font-weight: 400;
     margin-bottom: 64px;
     padding: 0 6.5em;
   }
@@ -256,7 +258,6 @@ form button:active {
   margin: 32px 0 11px;
 }
 .pitches-container .pitch-container p {
-  font-weight: 200;
   margin: 0;
 }
 .pitches-container .pitch-container .img-wrapper {
@@ -328,6 +329,7 @@ form button:active {
     padding-top: 48px;
   }
   .pitches-container .pitch-container p {
+    font-weight: 400;
     padding-right: 1em;
   }
 }
@@ -346,6 +348,9 @@ form button:active {
   .pricing-plan-section h2 {
     margin-bottom: 27px;
   }
+  .pricing-plan-section p {
+    line-height: 1.6672;
+  }
 }
 @media screen and (min-width: 1440px) {
   .pricing-plan-section {
@@ -356,7 +361,7 @@ form button:active {
     margin-bottom: 24px;
   }
   .pricing-plan-section p {
-    font-weight: 200;
+    font-weight: 400;
   }
 }
 
@@ -406,7 +411,7 @@ form button:active {
 }
 .price-plan-cards .price-plan-card .card-features h3 span {
   position: relative;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 15px;
   opacity: 60%;
   bottom: 0.5em;
@@ -434,6 +439,7 @@ form button:active {
   color: #ffffff;
 }
 .price-plan-cards .free-card p {
+  font-weight: 400;
   opacity: 60%;
 }
 .price-plan-cards .free-card ul li::before {
