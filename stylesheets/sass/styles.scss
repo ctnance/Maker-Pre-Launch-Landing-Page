@@ -134,6 +134,7 @@ form {
         margin-top: 24px;
         background-color: $light-blue;
         color: $medium-blue;
+        cursor: pointer;
 
         @media #{$tablet-size} {
             width: 140px;
@@ -383,6 +384,7 @@ form {
 
             h3 {
                 clear: left;
+                margin-bottom: 23px;
                 padding-top: 48px;
             }
 

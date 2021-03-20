@@ -88,18 +88,18 @@ form input {
   font: inherit;
   font-weight: 800;
 }
-form input[type="email"] {
+form input[type=email] {
   background-color: #093f68;
   color: #777f98;
 }
 @media screen and (min-width: 768px) {
-  form input[type="email"] {
+  form input[type=email] {
     width: 320px;
     margin-right: 16px;
   }
 }
-form input[type="email"]:active,
-form input[type="email"]:focus {
+form input[type=email]:active,
+form input[type=email]:focus {
   color: #ffffff;
 }
 form button {
@@ -112,6 +112,7 @@ form button {
   margin-top: 24px;
   background-color: #3ee9e5;
   color: #093f68;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   form button {
@@ -237,7 +238,7 @@ form button:active {
     margin: 0 auto 142px;
   }
   .pitches-container .pitch-container-one,
-  .pitches-container .pitch-container-three {
+.pitches-container .pitch-container-three {
     margin-left: auto;
   }
 }
@@ -250,7 +251,7 @@ form button:active {
     margin-bottom: 202px;
   }
   .pitches-container .pitch-container-two,
-  .pitches-container .pitch-container-four {
+.pitches-container .pitch-container-four {
     align-self: flex-end;
   }
 }
@@ -329,6 +330,7 @@ form button:active {
   }
   .pitches-container .pitch-container h3 {
     clear: left;
+    margin-bottom: 23px;
     padding-top: 48px;
   }
   .pitches-container .pitch-container p {
